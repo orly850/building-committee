@@ -1,0 +1,21 @@
+[
+  {
+      "fname": "gil",
+      "email": "gil@gil.com",
+      "apartment": "1",
+      "isCmember": "false"
+  },
+  {
+    "fname": "ran",
+    "email": "ran@ran.com",
+    "apartment": "1",
+    "isCmember": "false"
+
+   },
+   {
+    "fname": "lea",
+    "email": "lea@lea.com",
+    "apartment": "1",
+    "isCmember": "true"
+  }
+]
