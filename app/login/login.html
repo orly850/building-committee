@@ -1,8 +1,9 @@
-    <div class="login">
 
+    <div class="login">
         <h1>Login</h1>
+
         <form>
-           
+
             <div class="form-group">
                 <label for="userName">User Name:</label>
                 <input type="text" class="form-control" id="userName" ng-model="name">
@@ -11,8 +12,10 @@
                 <label for="pwd">Password:</label>
                 <input type="password" class="form-control" id="pwd" ng-model="pass">
             </div>
-            <button type="button" class="btn btn-primary" ng-click="login()" >Login</button>
-            <p ng-show="loginError">Login error </p>
-        </form>
+            <button type="button" class="btn btn-primary btn-block" ng-click="login()">Login</button>
+            <div class="alert alert-danger" role="alert" ng-show="loginError">
+                <strong>Login Failed</strong> incorect username or password
+            </div>
 
+        </form>
     </div>

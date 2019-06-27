@@ -1,11 +1,11 @@
-app.controller("loginCtrl", function ($scope) {
+app.controller("loginCtrl", function ($scope, $location) {
     $scope.loginError = false;
     $scope.name = "";
     $scope.pass = "";
 
     $scope.login = function () {
         if ($scope.name === "lea" && $scope.pass === "1") {
-            $scope.loginError = false;
+            $location.path("/message");
         } else {
             $scope.loginError = true;
 
