@@ -1,21 +1,23 @@
 [
   {
-      "fname": "gil",
-      "email": "gil@gil.com",
-      "apartment": "1",
-      "isCmember": "false"
+    "community": "1",
+    "fname": "gil",
+    "email": "gil@gil.com",
+    "apartment": "16",
+    "isCmember": "false"
   },
   {
+    "community": "1",
     "fname": "ran",
     "email": "ran@ran.com",
-    "apartment": "1",
+    "apartment": "6",
     "isCmember": "false"
-
-   },
-   {
+  },
+  {
+    "community": "1",
     "fname": "lea",
     "email": "lea@lea.com",
-    "apartment": "1",
+    "apartment": "10",
     "isCmember": "true"
   }
 ]

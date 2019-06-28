@@ -9,7 +9,10 @@ app.config(function ($routeProvider) {
             controller: "loginCtrl"
         }).when("/message", {
             templateUrl: "app/message/message.html",
-            controller: "messageCtrl"
+            controller: "messageCtrl",
+        }).when("/tenants", {
+            templateUrl: "app/tenants/tenants.html",
+            controller: "tenantsCtrl"
         })
 
 
