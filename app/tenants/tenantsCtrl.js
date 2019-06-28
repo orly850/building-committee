@@ -12,7 +12,7 @@ app.controller("tenantsCtrl", function ($scope, $http) {
 
     $scope.tenantArr = [];
 
-    $http.get("app/data/message.json").then(function (res) {
+    $http.get("app/data/users.json").then(function (res) {
 
         for (var i = 0; i < res.data.length; i++) {
             var tenant = new User(res.data[i].communityId,res.data[i].name, res.data[i].email,

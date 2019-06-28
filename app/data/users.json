@@ -1,23 +1,25 @@
 [
   {
-    "community": "1",
-    "fname": "gil",
+    "communityId": "1",
+    "name": "gil",
     "email": "gil@gil.com",
-    "apartment": "16",
-    "isCmember": "false"
+    "appartment": "16",
+    "isCommitteeMember": "false"
   },
   {
-    "community": "1",
-    "fname": "ran",
+    "communityId": "1",
+    "name": "ran",
     "email": "ran@ran.com",
-    "apartment": "6",
-    "isCmember": "false"
+    "appartment": "6",
+    "isCommitteeMember": "false"
   },
   {
-    "community": "1",
-    "fname": "lea",
+    "communityId": "1",
+    "name": "lea",
     "email": "lea@lea.com",
-    "apartment": "10",
-    "isCmember": "true"
+    "appartment": "10",
+    "isCommitteeMember": "true"
   }
 ]
+
+

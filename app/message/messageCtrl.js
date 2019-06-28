@@ -9,6 +9,9 @@ app.controller("messageCtrl", function ($scope, $http) {
         this.priority = priority;
     };
 
+
+    
+
     $scope.msgArr = [];
 
     $http.get("app/data/message.json").then(function (res) {
