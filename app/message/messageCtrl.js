@@ -10,7 +10,7 @@ app.controller("messageCtrl", function ($scope, $http) {
     };
 
 
-    
+
 
     $scope.msgArr = [];
 
@@ -21,9 +21,20 @@ app.controller("messageCtrl", function ($scope, $http) {
                 res.data[i].title, res.data[i].details, res.data[i].priority);
             $scope.msgArr.push(message);
         }
-        console.log( $scope.msgArr);
+        console.log($scope.msgArr);
     }, function (err) {
         console.error(err);
     })
+
+
+    $scope.query = "";
+    $scope.filterMsg = function (Msg) {
+        if (Msg.title.toLowerCase().includes($scope.query.toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
 
 })

@@ -33,7 +33,7 @@
     </div>
 
     <div class="msgg" id="accordianId" role="tablist" aria-multiselectable="true">
-        <div class="card" ng-repeat="item in msgArr">
+        <div class="card" ng-repeat="item in msgArr| filter:filterMsg">
             <div class="card-header" role="tab" id="section1HeaderId">
                 <h5 class="mb-0">
                     <a data-toggle="collapse" data-parent="#accordianId" href="#{{item.createdBy}}" target="_self"
