@@ -1,13 +1,15 @@
 
 app.factory("userSrv", function ($log, $http, $q) {
 
-    function User(communityId, name, email, appartment, isMember) {
+    function User(communityId, name, email, appartment, isMember, password) {
 
         this.communityId = communityId;
         this.name = name;
         this.email = email;
         this.appartment = appartment;
         this.isCommitteeMember = isMember;
+        this.password = password;
+
     };
 
     function getUser() {
@@ -17,7 +19,7 @@ app.factory("userSrv", function ($log, $http, $q) {
         $http.get("app/data/users.json").then(function (res) {
             for (var i = 0; i < res.data.length; i++) {
                 var user1 = new User(res.data[i].communityId, res.data[i].name, res.data[i].email,
-                    res.data[i].appartment, res.data[i].isCommitteeMember);
+                    res.data[i].appartment, res.data[i].isCommitteeMember, res.data[i].password);
                 users.push(user1);
             }
             async.resolve(users);
@@ -31,33 +33,40 @@ app.factory("userSrv", function ($log, $http, $q) {
 
     //===============================================================================
 
-    var active = null;
-
-    function islogedin() {
-        return active ? true : false;
-    };
+    // function islogedin() {
+    //     return active ? true : false;
+    // };
 
     //-----------------------
+
+    var active = null;
 
     function login(name, pass) {
         var async = $q.defer();
 
-        if (name === "lea" && pass === "1") {
-            active = new User({ communityId: 1, name: "lea", email: "lea@lea.com", appartment: 16, isCommitteeMember: "true" });
-            async.resolve(active);
-        } else {
-            // $scope.loginError = true;
-            async.reject();
-        }
+        active = null;
 
-        return async.promise
-    };
+        $http.get("app/data/users.json").then(function (res) {
+            var users = res.data;
+            for (var i = 0; i < users.length; i++) {
+                if (name === users[i].name && pass === users[i].password) {
+                    active = users[i];
+                    async.resolve(active);
+                }
+            }
 
+        }, function (err) {
+            async.reject(err);
+        })
+
+        return async.promise;
+    }
 
     return {
         getUser: getUser,
-        islogedin: islogedin,
         login: login
+        // islogedin: islogedin,
+
     }
 });
 

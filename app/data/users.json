@@ -5,7 +5,7 @@
     "email": "gil@gil.com",
     "appartment": "16",
     "isCommitteeMember": "false",
-    "pass":"1"
+    "password":"1"
   },
   {
     "communityId": "1",
@@ -13,7 +13,7 @@
     "email": "ran@ran.com",
     "appartment": "6",
     "isCommitteeMember": "false",
-    "pass":"1"
+    "password":"1"
   },
   {
     "communityId": "1",
@@ -21,8 +21,17 @@
     "email": "lea@lea.com",
     "appartment": "10",
     "isCommitteeMember": "true",
-    "pass":"1"
+    "password":"1"
+  },
+  {
+    "communityId": "1",
+    "name": "tal",
+    "email": "tal@tal.com",
+    "appartment": "9",
+    "isCommitteeMember": "false",
+    "password":"3"
   }
+
 ]
 
 
