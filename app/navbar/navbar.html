@@ -9,25 +9,25 @@
 
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#!tenants" >Tenant <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#!tenants" ng-hide="!func()" >Tenant <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#!message">Messages</a>
+                <a class="nav-link" href="#!message" ng-hide="!func()">Messages</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-hide="!isLogedIn()">Voting</a>
+                <a class="nav-link" href="#" ng-hide="!func()">Voting</a>
             </li>
         </ul>
 
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#!/login">Login <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#!/login" ng-hide="func()">Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" ng-hide="!isLogedIn()">Logout</a>
+                <a class="nav-link" href="#/home" ng-click=logout() ng-show="func()">Logout</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="nav-link" href="#" ng-hide="func()">Sign Up</a>
             </li>
         </ul>
     </div>

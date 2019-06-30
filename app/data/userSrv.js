@@ -33,9 +33,9 @@ app.factory("userSrv", function ($log, $http, $q) {
 
     //===============================================================================
 
-    // function islogedin() {
-    //     return active ? true : false;
-    // };
+    function islogedin() {
+        return active ? true : false;
+    };
 
     //-----------------------
 
@@ -64,8 +64,8 @@ app.factory("userSrv", function ($log, $http, $q) {
 
     return {
         getUser: getUser,
-        login: login
-        // islogedin: islogedin,
+        login: login,
+        islogedin: islogedin,
 
     }
 });
