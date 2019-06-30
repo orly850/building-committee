@@ -4,21 +4,24 @@
     "name": "gil",
     "email": "gil@gil.com",
     "appartment": "16",
-    "isCommitteeMember": "false"
+    "isCommitteeMember": "false",
+    "pass":"1"
   },
   {
     "communityId": "1",
     "name": "ran",
     "email": "ran@ran.com",
     "appartment": "6",
-    "isCommitteeMember": "false"
+    "isCommitteeMember": "false",
+    "pass":"1"
   },
   {
     "communityId": "1",
     "name": "lea",
     "email": "lea@lea.com",
     "appartment": "10",
-    "isCommitteeMember": "true"
+    "isCommitteeMember": "true",
+    "pass":"1"
   }
 ]
 

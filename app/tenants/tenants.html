@@ -16,11 +16,11 @@
             <div class="card-body">
                 <div class="row">
                     <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcaiB3eR6VT5veGwRhp2leMG7IAmHrNiIbWOeyzCnY7fcWRxZ1">
+                        <img ng-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcaiB3eR6VT5veGwRhp2leMG7IAmHrNiIbWOeyzCnY7fcWRxZ1">
                     </div>
                     <div class="col">
                             Name: {{item.name}}<br>
-                            Email: {{item.email}}<br>
+                            Email: <a ng-href="mailto:{{item.email}}">{{item.email}}</a> <br>
                             Appartment: {{item.appartment}}
                     </div>
                 </div>

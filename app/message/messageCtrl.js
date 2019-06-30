@@ -39,14 +39,14 @@ app.controller("messageCtrl", function ($scope, $http,msgSrv) {
     // })
 
 
-    // $scope.query = "";
-    // $scope.filterMsg = function (Msg) {
-    //     if (Msg.title.toLowerCase().includes($scope.query.toLowerCase())) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // };
+    $scope.query = "";
+    $scope.filterMsg = function (Msg) {
+        if (Msg.title.toLowerCase().includes($scope.query.toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    };
 
 
 })
