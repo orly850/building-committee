@@ -1,4 +1,4 @@
-app.controller("tenantsCtrl", function ($scope, userSrv) {
+app.controller("tenantsCtrl", function ($scope, userSrv,$log) {
 
    
     userSrv.getUser().then(function (users) {
@@ -7,6 +7,6 @@ app.controller("tenantsCtrl", function ($scope, userSrv) {
         $log.error(err);
     });
 
-    console.log( $scope.tenantArr);
+    $log.info("ok" + JSON.stringify($scope.tenantArr))
 })
 

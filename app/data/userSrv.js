@@ -29,8 +29,52 @@ app.factory("userSrv", function ($log, $http, $q) {
         return async.promise;
     }
 
-    return {
-        getUser: getUser
-    }
+    //===============================================================================
 
-})
+    var active = null;
+
+    function islogedin() {
+        return active ? true : false;
+    };
+
+    //-----------------------
+
+    function login(name, pass) {
+        var async = $q.defer();
+
+        if (name === "lea" && pass === "1") {
+            active = new User({ communityId: 1, name: "lea", email: "lea@lea.com", appartment: 16, isCommitteeMember: "true" });
+            async.resolve(active);
+        } else {
+            // $scope.loginError = true;
+            async.reject();
+        }
+
+        return async.promise
+    };
+
+
+    return {
+        getUser: getUser,
+        islogedin: islogedin,
+        login: login
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
