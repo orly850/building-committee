@@ -9,7 +9,7 @@ app.controller("messageCtrl", function ($scope, $http,msgSrv) {
     
 
 
-
+ 
 
 
     // function Msg(by, at, title, details, priority) {

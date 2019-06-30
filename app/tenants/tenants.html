@@ -1,2 +1,22 @@
 <nav-bar></nav-bar>
 <h1>tenants</h1>
+
+<div class="msgg" id="accordianId" role="tablist" aria-multiselectable="true">
+    <div class="card" ng-repeat="item in tenantArr">
+        <div class="card-header" role="tab" id="section1HeaderId">
+            <h5 class="mb-0">
+                <a data-toggle="collapse" data-parent="#accordianId" href="#{{item.name}}" target="_self"
+                    aria-expanded="true" aria-controls="section1ContentId">
+                    {{item.name}}
+                </a>
+            </h5>
+        </div>
+        <div id="{{item.name}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+            <div class="card-body">
+
+                {{item.email}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
