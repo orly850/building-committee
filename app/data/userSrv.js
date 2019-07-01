@@ -55,6 +55,10 @@ app.factory("userSrv", function ($log, $http, $q) {
                 }
             }
 
+            if (!active) {
+                async.reject(401);    
+            }
+
         }, function (err) {
             async.reject(err);
         })
@@ -65,9 +69,11 @@ app.factory("userSrv", function ($log, $http, $q) {
     return {
         getUser: getUser,
         login: login,
-        islogedin: islogedin,
+        islogedin: islogedin
 
     }
+
+
 });
 
 

@@ -9,7 +9,7 @@ app.controller("loginCtrl", function ($scope, $location, $log, userSrv) {
         userSrv.login($scope.name, $scope.pass).then(function (activ) {
             $log.info("ok" + JSON.stringify(activ));
 
-            if (activ.name === "lea") {
+            if (activ.isCommitteeMember==="true") {
                 $location.path("/message");
             } else {
 
@@ -22,13 +22,8 @@ app.controller("loginCtrl", function ($scope, $location, $log, userSrv) {
             $scope.loginError = true;
 
         });
-        $scope.loginError = true;
+        // $scope.loginError = true;
     }
-
-
-
-
-
 
 
 });

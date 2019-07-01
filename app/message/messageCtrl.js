@@ -7,11 +7,7 @@ app.controller("messageCtrl", function ($scope, $http,msgSrv) {
         $log.error(err);
       })
     
-
-
  
-
-
       $scope.val = "";
 
     $scope.query = "";
@@ -23,5 +19,6 @@ app.controller("messageCtrl", function ($scope, $http,msgSrv) {
         }
     };
 
+    msgSrv.newMsg("6","lea","2019-06-17","new massege","new massege","info");
 
 })

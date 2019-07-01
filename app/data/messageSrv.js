@@ -1,7 +1,8 @@
 app.factory("msgSrv", function ($http, $q) {
 
-    function Msg(by, at, title, details, priority) {
+    function Msg(id,by, at, title, details, priority) {
 
+        this.id = id;
         this.createdBy = by;
         this.createdAt = at;
         this.title = title;
@@ -9,14 +10,16 @@ app.factory("msgSrv", function ($http, $q) {
         this.priority = priority;
     };
 
+    var msgArr = [];
+    var wasEverLoaded = false;
 
     function getMsg() {
         var async = $q.defer();
-        var msgArr = [];
+
         $http.get("app/data/message.json").then(function (res) {
 
             for (var i = 0; i < res.data.length; i++) {
-                var message = new Msg(res.data[i].createdBy, res.data[i].createdAt,
+                var message = new Msg(res.data[i].id,res.data[i].createdBy, res.data[i].createdAt,
                     res.data[i].title, res.data[i].details, res.data[i].priority);
                 msgArr.push(message);
             }
@@ -31,7 +34,19 @@ app.factory("msgSrv", function ($http, $q) {
         return async.promise;
     }
 
-    return {
-        getMsg: getMsg
+    //new message
+    function newMsg(id,createdBy, createdAt, title, details, priority) {
+        var newMessage = new Msg(id,createdBy, createdAt, title, details, priority);
+        msgArr.push(newMessage);
+
     }
+
+
+
+    return {
+        getMsg: getMsg,
+        newMsg: newMsg
+    }
+
+
 })
