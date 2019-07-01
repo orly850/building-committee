@@ -2,7 +2,7 @@ app.controller("navbarCtrl", function($scope,userSrv){
 
     
 
-    $scope.func =function(){
+    $scope.isLog =function(){
 
         return userSrv.islogedin();
 

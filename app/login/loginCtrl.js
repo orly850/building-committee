@@ -12,17 +12,12 @@ app.controller("loginCtrl", function ($scope, $location, $log, userSrv) {
             if (activ.isCommitteeMember) {
                 $location.path("/message");
             } else {
-
                 $location.path("/tenants");
             }
-
-
-            // $location.path("/message");
         }, function (err) {
             $scope.loginError = true;
 
         });
-        // $scope.loginError = true;
     }
 
 

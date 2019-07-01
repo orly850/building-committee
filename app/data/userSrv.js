@@ -38,7 +38,7 @@ app.factory("userSrv", function ($log, $http, $q) {
     };
 
     //-----------------------
-
+    
     var active = null;
 
     function login(name, pass) {
@@ -58,22 +58,16 @@ app.factory("userSrv", function ($log, $http, $q) {
             if (!active) {
                 async.reject(401);    
             }
-
         }, function (err) {
             async.reject(err);
         })
-
         return async.promise;
     }
-
     return {
         getUser: getUser,
         login: login,
         islogedin: islogedin
-
     }
-
-
 });
 
 
