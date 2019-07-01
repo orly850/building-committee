@@ -4,7 +4,7 @@
     "name": "gil",
     "email": "gil@gil.com",
     "appartment": "16",
-    "isCommitteeMember": "false",
+    "isCommitteeMember": false,
     "password":"1"
   },
   {
@@ -12,7 +12,7 @@
     "name": "ran",
     "email": "ran@ran.com",
     "appartment": "6",
-    "isCommitteeMember": "false",
+    "isCommitteeMember": false,
     "password":"1"
   },
   {
@@ -20,7 +20,7 @@
     "name": "lea",
     "email": "lea@lea.com",
     "appartment": "10",
-    "isCommitteeMember": "true",
+    "isCommitteeMember": true,
     "password":"1"
   },
   {
@@ -28,7 +28,7 @@
     "name": "tal",
     "email": "tal@tal.com",
     "appartment": "9",
-    "isCommitteeMember": "false",
+    "isCommitteeMember": false,
     "password":"1"
   }
 

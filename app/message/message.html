@@ -29,31 +29,32 @@
                 <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Priority
             </label>
 
-            <a class="nav-link" href="#" ng-click="newMsg"()>new massage</a>
+            <a class="nav-link" href="#" ng-click="newMsg()">New Massage</a>
 
         </div>
 
 
     </div>
 
-    <div class="msgg" id="accordianId" role="tablist" aria-multiselectable="true">
+    <div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
 
         <div class="card" ng-repeat="item in msgArr| filter:filterMsg | orderBy:val">
 
             <div class="card-header" role="tab" id="section1HeaderId">
                 <h5 class="mb-0">
-                    <a data-toggle="collapse" data-parent="#accordianId" href="#{{item.createdBy}}" target="_self"
+                    <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}" target="_self"
                         aria-expanded="true" aria-controls="section1ContentId">
                         {{item.title}}
                     </a>
                 </h5>
             </div>
-            <div id="{{item.createdBy}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+            <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
                 <div class="card-body">
-
                     {{item.details}}
                 </div>
             </div>
         </div>
     </div>
+
+    
 </div>

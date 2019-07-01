@@ -1,16 +1,16 @@
-app.controller("messageCtrl", function ($scope, $http,msgSrv) {
+app.controller("messageCtrl", function ($scope, $http, msgSrv) {
 
 
-    msgSrv.getMsg().then(function(msgArr) {
+    msgSrv.getMsg().then(function (msgArr) {
         $scope.msgArr = msgArr;
-      }, function(err) {
+    }, function (err) {
         $log.error(err);
-      })
-    
- 
-      $scope.val = "";
+    })
 
+
+    $scope.val = "";
     $scope.query = "";
+
     $scope.filterMsg = function (Msg) {
         if (Msg.title.toLowerCase().includes($scope.query.toLowerCase())) {
             return true;
@@ -18,7 +18,9 @@ app.controller("messageCtrl", function ($scope, $http,msgSrv) {
             return false;
         }
     };
-
-    msgSrv.newMsg("6","lea","2019-06-17","new massege","new massege","info");
+    $scope.newMsg = function () {
+ 
+    msgSrv.newMsg("6", "lea", "2019-06-17", "new massege", "new massege", "info");
+ };
 
 })

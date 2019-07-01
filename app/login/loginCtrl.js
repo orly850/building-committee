@@ -9,7 +9,7 @@ app.controller("loginCtrl", function ($scope, $location, $log, userSrv) {
         userSrv.login($scope.name, $scope.pass).then(function (activ) {
             $log.info("ok" + JSON.stringify(activ));
 
-            if (activ.isCommitteeMember==="true") {
+            if (activ.isCommitteeMember) {
                 $location.path("/message");
             } else {
 
