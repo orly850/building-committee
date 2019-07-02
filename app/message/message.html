@@ -1,10 +1,10 @@
 <div>
     <nav-bar></nav-bar>
     <div class="msg">
-        <h4>wellcome {{ active.name}}</h4>
+<h4>wellcome {{ active.name}}</h4>
         <h1>message</h1> <br>
-
-
+        
+<div ng-include="'app/message/newMessage.html'"></div>
         <div class="row ">
             <div class="form-group col md-6">
                 <label for=""></label>
@@ -24,12 +24,11 @@
 
             <div class="form-check form-check-inline col md-3">
                 <label class="form-check-label  ml-auto"> <strong>Sort By : </strong>
-                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Date
-                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Priority
+                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Date  
+                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Priority  
                 </label>
 
-                <a class="nav-link" href="#!/newMessage" ng-show="isCommittee()">New Massage</a>
-
+                <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newMsg()" data-toggle="modal" data-target="#modelId">Add New Massage</button>
             </div>
         </div>
 
@@ -48,14 +47,10 @@
                 <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel"
                     aria-labelledby="section1HeaderId">
                     <div class="card-body">
-                        {{item.details}} 
-                        {{item.createdAt}}
-
+                        {{item.details}}
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>

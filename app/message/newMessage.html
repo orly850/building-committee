@@ -1,46 +1,71 @@
-<nav-Bar></nav-Bar>
-<div class="msg">
+<!-- <nav-Bar></nav-Bar> -->
+<div ng-controller="newMesCtrl" class="msg">
 
-    <h2>New Message</h2>
-    <form>
-        <div class="form-group row">
-            <label for="input1" class="col-sm-2 col-form-label">Title</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="input1" placeholder="Enter title" ng-model="title">
-            </div>
-        </div>
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+        Launch
+    </button> -->
 
-        <div class="form-group row">
-            <label for="input2" class="col-sm-2 col-form-label">Details</label>
-            <div class="col-sm-10">
-                <textarea class="form-control" rows="3" ng-model="details"></textarea>
-            </div>
-        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">new message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-        <div class="form-group row">
-            <label for="input2" class="col-sm-2 col-form-label" ng-model="priorty">Priorty</label>
-            <div class="col-sm-10">
-                <select class="custom-select custom-select-sm">
-                    <!-- <option selected>Open this select menu</option> -->
-                    <option value="1">Info</option>
-                    <option value="2">Importtant</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="input2" class="col-sm-2 col-form-label">Image URL</label>
-            <div class="col-sm-10">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input">
-                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    <form>
+                        <div class="form-group row">
+                            <label for="input1" class="col-sm-2 col-form-label">Title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="input1" placeholder="Enter title"
+                                    ng-model="title">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="input2" class="col-sm-2 col-form-label">Details</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="3" ng-model="details"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="input2" class="col-sm-2 col-form-label" ng-model="priorty">Priorty</label>
+                            <div class="col-sm-10">
+                                <select class="custom-select custom-select-sm">
+                                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                                    <!-- <option selected>Open this select menu</option> -->
+                                    <option value="1">Info</option>
+                                    <option value="2">Importtant</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="input2" class="col-sm-2 col-form-label">Image URL</label>
+                            <div class="col-sm-10">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input">
+                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto my-1">
+                            <button type="button" class="btn btn-primary" ng-click="newMsg()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
-
-        <div class="col-auto my-1">
-            <button type="button" class="btn btn-primary" ng-click="newMsg()">Submit</button>
-        </div>
-
-    </form>
+    </div>
 </div>

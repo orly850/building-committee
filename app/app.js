@@ -13,11 +13,12 @@ app.config(function ($routeProvider) {
         }).when("/tenants", {
             templateUrl: "app/tenants/tenants.html",
             controller: "tenantsCtrl"
-        }).when("/newMessage", {
-            templateUrl: "app/message/newMessage.html",
-            controller: "newMesCtrl"
+        })
+        // .when("/newMessage", {
+    //         templateUrl: "app/message/newMessage.html",
+    //         controller: "newMesCtrl"
         
-     })
+    //  })
 
 
 });
