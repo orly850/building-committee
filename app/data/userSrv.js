@@ -9,8 +9,8 @@ app.factory("userSrv", function ($log, $http, $q) {
         this.appartment = appartment;
         this.isCommitteeMember = isMember;
         this.password = password;
-
-    };
+    }
+    //----------------------------------------
 
     function getUser() {
         var async = $q.defer();
@@ -26,19 +26,13 @@ app.factory("userSrv", function ($log, $http, $q) {
         }, function (err) {
             $log.error(err);
             async.reject(err);
-        });
+        })
 
         return async.promise;
     }
 
-    //===============================================================================
+    //--------------------------------------------   
 
-    function islogedin() {
-        return active ? true : false;
-    };
-
-    //-----------------------
-    
     var active = null;
 
     function login(name, pass) {
@@ -56,16 +50,28 @@ app.factory("userSrv", function ($log, $http, $q) {
             }
 
             if (!active) {
-                async.reject(401);    
+                async.reject(401);
             }
         }, function (err) {
             async.reject(err);
         })
         return async.promise;
     }
+    //--------------------------------------
+    function islogedin() {
+        return active ? true : false;
+    }
+
+    //------------------------------------
+    function logedout() {
+        active = null;
+    }
+    //---------------------------------------------------
+
     return {
         getUser: getUser,
         login: login,
+        logedout: logedout,
         islogedin: islogedin
     }
 });

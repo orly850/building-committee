@@ -1,11 +1,26 @@
-app.controller("navbarCtrl", function($scope,userSrv){
+app.controller("navbarCtrl", function ($scope, $location,userSrv) {
+
+
+    $scope.isLog =function(){
+        return userSrv.islogedin();
+    }
+
+    $scope.logout =function(){
+        userSrv.logedout();
+        $location.path("/");
+
+    };
 
     
 
-    $scope.isLog =function(){
+    //     $scope.isLoggedIn = function() {
+    //     return userSrv.isLoggedIn();
+    // }
 
-        return userSrv.islogedin();
+    // $scope.logout = function() {
+        
+    //     $location.path("/");
+    // }
 
-    }
 
 })
