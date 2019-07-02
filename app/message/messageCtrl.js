@@ -7,7 +7,7 @@ app.controller("messageCtrl", function ($scope,  msgSrv,userSrv) {
         $log.error(err);
     })
 
-    
+
 
   //-----------------------------------------------------
     $scope.active = userSrv.getActive();
@@ -23,12 +23,6 @@ app.controller("messageCtrl", function ($scope,  msgSrv,userSrv) {
         }
     }
       //-----------------------------------------------------
-    // $scope.newMsg = function () {
-
-    //     msgSrv.newMsg("6", "lea", "2019-06-17", "new massege", "new massege", "info");
-    // };
-
-    //-----------------------------------------------
 
     $scope.isCommittee = function () {
     return $scope.active.isCommitteeMember

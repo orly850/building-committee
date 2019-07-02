@@ -42,8 +42,9 @@ app.factory("msgSrv", function ($http, $q) {
 
     //new message---------------------------
     var msgCount = 7;
-    function newMsg(createdBy, createdAt, title, details, priority) {
-        var newMessage = new Msg(msgCount, createdBy, createdAt, title, details, priority);
+    var date = new Date();
+    function newMsg(createdBy, title, details, priority) {
+        var newMessage = new Msg(msgCount, createdBy, date, title, details, priority);
         ++msgCount;
         msgArr.push(newMessage);
         

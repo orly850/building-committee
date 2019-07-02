@@ -9,12 +9,6 @@ app.controller("loginCtrl", function ($scope, $location, $log, userSrv) {
         userSrv.login($scope.name, $scope.pass).then(function (active) {
             $log.info("ok" + JSON.stringify(active));
                 $location.path("/message");
-
-            // if (active.isCommitteeMember) {
-            //     $location.path("/message");
-            // } else {
-            //     $location.path("/tenants");
-            // }
         }, function (err) {
             $scope.loginError = true;
 

@@ -10,11 +10,6 @@ app.controller("navbarCtrl", function ($scope, $location,userSrv) {
         $location.path("/");
 
     }
-    // $scope.x=true;
-    // $scope.hide =function(){
-    //     $scope.x=false;
-    //     return x;
-    // }
 
 
     
