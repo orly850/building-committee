@@ -6,14 +6,15 @@ app.controller("loginCtrl", function ($scope, $location, $log, userSrv) {
 
     $scope.login = function () {
 
-        userSrv.login($scope.name, $scope.pass).then(function (activ) {
-            $log.info("ok" + JSON.stringify(activ));
-
-            if (activ.isCommitteeMember) {
+        userSrv.login($scope.name, $scope.pass).then(function (active) {
+            $log.info("ok" + JSON.stringify(active));
                 $location.path("/message");
-            } else {
-                $location.path("/tenants");
-            }
+
+            // if (active.isCommitteeMember) {
+            //     $location.path("/message");
+            // } else {
+            //     $location.path("/tenants");
+            // }
         }, function (err) {
             $scope.loginError = true;
 

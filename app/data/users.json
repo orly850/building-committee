@@ -4,7 +4,7 @@
     "name": "gil",
     "email": "gil@gil.com",
     "appartment": "16",
-    "isCommitteeMember": false,
+    "isCommitteeMember": true,
     "password":"1"
   },
   {

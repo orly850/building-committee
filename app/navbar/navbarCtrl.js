@@ -9,18 +9,14 @@ app.controller("navbarCtrl", function ($scope, $location,userSrv) {
         userSrv.logedout();
         $location.path("/");
 
-    };
+    }
+    // $scope.x=true;
+    // $scope.hide =function(){
+    //     $scope.x=false;
+    //     return x;
+    // }
+
 
     
-
-    //     $scope.isLoggedIn = function() {
-    //     return userSrv.isLoggedIn();
-    // }
-
-    // $scope.logout = function() {
-        
-    //     $location.path("/");
-    // }
-
 
 })
