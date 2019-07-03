@@ -41,19 +41,26 @@ app.factory("msgSrv", function ($http, $q) {
     }
 
     //new message---------------------------
-    var msgCount = 7;
+    var msgCount = 4;
     var date = new Date();
     function newMsg(createdBy, title, details, priority) {
         var newMessage = new Msg(msgCount, createdBy, date, title, details, priority);
         ++msgCount;
         msgArr.push(newMessage);
         console.log(msgArr);
-        
+    }
+
+    // delete message-------------------------
+
+    function deleteMsg(mes){
+        var a = msgArr.indexOf(mes);
+        msgArr.splice(a, 1);
     }
 
     return {
         getMsg: getMsg,
-        newMsg: newMsg
+        newMsg: newMsg,
+        deleteMsg:deleteMsg
     }
 
 

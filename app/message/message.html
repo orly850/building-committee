@@ -1,7 +1,7 @@
 <div>
     <nav-bar></nav-bar>
     <div class="msg">
-        <h4>wellcome {{ active.name}}</h4>
+        <h4>wellcome {{active.name}}</h4>
         <h1>message</h1>
         <br>
 
@@ -45,7 +45,7 @@
 
                         <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}"
                             target="_self" aria-expanded="true" aria-controls="section1ContentId">
-                            {{item.createdAt|date}} =
+                            {{item.createdAt|date}} __
                             {{item.title}}
                         </a>
                     </h6>
@@ -59,7 +59,7 @@
                             {{item.details}}
                             {{item.priority}}
                         </div>
-                        <button type="button" class="btn btn-primary" ng-click="deletMsg()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-primary" ng-click="deleteMsg(item)"><i class="fa fa-trash" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>

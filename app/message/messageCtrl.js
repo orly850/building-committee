@@ -29,9 +29,13 @@ app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
   }
 
   //----------------------------------
-  $scope.isCommittee = function () {
-    return $scope.active.isCommitteeMember
-  }
+  $scope.deleteMsg = function (mes) {
+
+    msgSrv.deleteMsg(mes);
+      
+    }
+  //   return $scope.active.isCommitteeMember
+  // }
 
 
 })
