@@ -17,10 +17,6 @@ app.controller("newMesCtrl", function ($scope, $log, userSrv, msgSrv) {
 
 
 
-
-
-
-
 })
 
 

@@ -1,15 +1,15 @@
 <div>
     <nav-bar></nav-bar>
     <div class="msg">
-<h4>wellcome {{ active.name}}</h4>
-        <h1>message</h1> <br>
-        
-<div ng-include="'app/message/newMessage.html'"></div>
+        <h4>wellcome {{ active.name}}</h4>
+        <h1>message</h1>
+        <br>
+
+        <div ng-include="'app/message/newMessage.html'"></div>
         <div class="row ">
             <div class="form-group col md-6">
                 <label for=""></label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="search"
-                    ng-model="query">
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="search" ng-model="query">
                 <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
             </div>
 
@@ -23,12 +23,14 @@
             </div>
 
             <div class="form-check form-check-inline col md-3">
-                <label class="form-check-label  ml-auto"> <strong>Sort By : </strong>
-                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Date  
-                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Priority  
+                <label class="form-check-label  ml-auto">
+                    <strong>Sort By : </strong>
+                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Date
+                    <input class="form-check-input " type="radio" name="" id="" value="checkedValue"> Priority
                 </label>
 
-                <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newMsg()" data-toggle="modal" data-target="#modelId">Add New Massage</button>
+                <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newMsg()" data-toggle="modal" data-target="#modelId" ng-show="isCommittee()">Add New Massage</button>
+
             </div>
         </div>
 
@@ -38,15 +40,17 @@
 
                 <div class="card-header" role="tab" id="section1HeaderId">
                     <h5 class="mb-0">
-                        <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}"
-                            target="_self" aria-expanded="true" aria-controls="section1ContentId">
-                            {{item.title}}
+                        <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}" target="_self" aria-expanded="true"
+                            aria-controls="section1ContentId">
+
+                             {{item.title}}
                         </a>
                     </h5>
                 </div>
-                <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel"
-                    aria-labelledby="section1HeaderId">
+                <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
                     <div class="card-body">
+                    {{item.createdBy}} :
+                            <!-- <br> --> 
                         {{item.details}}
                     </div>
                 </div>
