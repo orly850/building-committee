@@ -12,8 +12,15 @@ app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
   //-----------------------------------------------------
   $scope.active = userSrv.getActive();
   //-----------------------------------------------------
+  $scope.isComeete = function () {
 
-  $scope.val = "";
+    return   $scope.active.isCommitteeMember;
+  }
+  
+
+  $scope.val 
+  $scope.val2 = "";
+
   $scope.query = "";
   $scope.filterMsg = function (Msg) {
     if (Msg.title.toLowerCase().includes($scope.query.toLowerCase())) {
