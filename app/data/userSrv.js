@@ -1,7 +1,7 @@
 
 app.factory("userSrv", function ($log, $http, $q) {
 
-    function User(communityId, name, email, appartment, isMember, password) {
+    function User(communityId, name, email, appartment, isMember, password,pic) {
 
         this.communityId = communityId;
         this.name = name;
@@ -9,6 +9,7 @@ app.factory("userSrv", function ($log, $http, $q) {
         this.appartment = appartment;
         this.isCommitteeMember = isMember;
         this.password = password;
+        this.pic=pic;
     }
     //----------------------------------------
     function getUser() {
@@ -17,7 +18,7 @@ app.factory("userSrv", function ($log, $http, $q) {
         $http.get("app/data/users.json").then(function (res) {
             for (var i = 0; i < res.data.length; i++) {
                 var user1 = new User(res.data[i].communityId, res.data[i].name, res.data[i].email,
-                    res.data[i].appartment, res.data[i].isCommitteeMember, res.data[i].password);
+                    res.data[i].appartment, res.data[i].isCommitteeMember, res.data[i].password,res.data[i].pic);
                 users.push(user1);
             }
             async.resolve(users);
