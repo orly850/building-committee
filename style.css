@@ -19,7 +19,16 @@
   .title{
       color:green;
   }
-  
+
+  .icon{
+    color:orange;
+    /* size: 9ch; */
+    /* padding: 1% */
+  }
+  .info{
+    color:rgba(255, 132, 0, 0.904)
+
+  }
 
   
 
