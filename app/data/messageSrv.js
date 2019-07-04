@@ -46,7 +46,7 @@ app.factory("msgSrv", function ($http, $q) {
     function newMsg(createdBy, title, details, priority) {
         var newMessage = new Msg(msgCount, createdBy, date, title, details, priority);
         ++msgCount;
-        msgArr.push(newMessage);
+        msgArr.unshift(newMessage);
         console.log(msgArr);
     }
 
@@ -57,10 +57,29 @@ app.factory("msgSrv", function ($http, $q) {
         msgArr.splice(a, 1);
     }
 
+    // edit a message ---------
+    var msg;
+    var a;
+    function seledtedMsg(msg){
+        a = msgArr.indexOf(msg);
+
+        
+    }
+
+    // function text(text){
+    //     var txt = text;
+    // }
+
+    function editMsg(txt){
+        msgArr[a].details = txt;
+    }
+//------------------------------
     return {
         getMsg: getMsg,
         newMsg: newMsg,
-        deleteMsg:deleteMsg
+        deleteMsg:deleteMsg,
+        editMsg:editMsg,
+        seledtedMsg:seledtedMsg
     }
 
 

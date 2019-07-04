@@ -1,5 +1,5 @@
 
-app.controller("newMesCtrl", function ($scope, $log, userSrv, msgSrv) {
+app.controller("newMesCtrl", function ($scope,  userSrv, msgSrv) {
 
     $scope.test = "dfgdfh";
 

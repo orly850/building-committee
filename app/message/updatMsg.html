@@ -1,0 +1,13 @@
+<div ng-controller="updatMsgCtrl" class="msg">
+
+    <form>
+        <div class="form-group row">
+            <label for="input2" class="col-sm-2 col-form-label">Details</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="3" ng-model="details"></textarea>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary ml-2" ng-click="editMsg()">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+    </form>
