@@ -47,23 +47,8 @@ app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
 
   // $scope.readMsg = [];
 
-  // $scope.openMsg = function (Msg) {
-  //   $scope.readMsg.push(Msg);
-
-  //   for (i = 0; i <= $scope.readMsg.length; i++) {
-  //     if ($scope.readMsg[i] === Msg) {
-  //       return false;
-  //     } else return  true;
-
-  //   }
-
-
-    
-  // }
-
-
-
-
-
+  $scope.openMsg = function (Msg) {
+    Msg.wasRead = true;
+  }
 
 })

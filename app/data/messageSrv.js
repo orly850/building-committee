@@ -8,6 +8,7 @@ app.factory("msgSrv", function ($http, $q) {
         this.title = title;
         this.details = details;
         this.priority = priority;
+        this.wasRead = false;
     }
 
     //------------------------------------------------------------
@@ -25,7 +26,7 @@ app.factory("msgSrv", function ($http, $q) {
 
                 for (var i = 0; i < res.data.length; i++) {
                     var message = new Msg(res.data[i].id, res.data[i].createdBy, res.data[i].createdAt,
-                        res.data[i].title, res.data[i].details, res.data[i].priority);
+                        res.data[i].title, res.data[i].details, res.data[i].priority,false);
                     msgArr.push(message);
                 }
 

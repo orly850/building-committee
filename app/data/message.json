@@ -6,7 +6,8 @@
         "title": "Tenants Meeting",
         "details": "Please dont late",
         "priority": "info",
-        "comments": ""
+        "comments": "",
+        "wasRead":false
 
     },
     {
@@ -16,7 +17,8 @@
         "title": "Cleanig day",
         "details": "friday morning at at 9:00 - 11:00 ",
         "priority": "info",
-        "comments": ""
+        "comments": "",
+        "wasRead":false
   
      },
 
@@ -27,7 +29,8 @@
     "title": "Dogs",
     "details": "please make soure yore dogs are chained",
     "priority": "important",
-    "comments": ""
+    "comments": "",
+    "wasRead":false
 },
 
 {
@@ -37,8 +40,7 @@
     "title": "Poker night",
     "details": "hello poker grupe! we will meet tommorow at 21:30, please bring snaks",
     "priority": "important",
-    "comments": ""
+    "comments": "",
+    "wasRead":false
 }
-
-
   ]

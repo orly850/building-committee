@@ -47,7 +47,7 @@
                     <h6 class="mb-0">
 
                         <a  data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
-                            target="_self" aria-expanded="true" aria-controls="section1ContentId"  ng-click = openMsg(item) ng-class="{'title' : item === readMsg }">
+                            target="_self" aria-expanded="true" aria-controls="section1ContentId"  ng-click = openMsg(item) ng-class="{'title' : item.wasRead }">
                             
                             {{item.createdAt|date}} __
                             {{item.title}}
@@ -63,11 +63,8 @@
                             {{item.details}}
                             {{item.priority}}
                         </div>
-
-
-                    <!-- <a href="#!updatMsg"> -->
+                        
                         <button type="button" class="btn btn-primary ml-2" ng-click="editMsg(item)" data-toggle="modal" data-target="#modelId2" >Edit <i class="far fa-edit"></i></button>
-                    <!-- </a> -->
                         
                         <button type="button" class="btn btn-danger ml-2" ng-click="deleteMsg(item)">Delete  <i class="fas fa-trash"></i></button>
                         
