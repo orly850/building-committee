@@ -23,32 +23,47 @@ app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
     }
   }
   //-----------------------------------------------------
-if($scope.active){
-
-
-  $scope.isCommittee = function () {
-    return $scope.active.isCommitteeMember
+  if ($scope.active) {
+    $scope.isCommittee = function () {
+      return $scope.active.isCommitteeMember
+    }
   }
-}
 
   //----------------------------------
   $scope.deleteMsg = function (mes) {
 
     msgSrv.deleteMsg(mes);
-      
-    }
+
+  }
   //   ---------------------------
 
   $scope.editMsg = function (msg) {
 
     msgSrv.seledtedMsg(msg);
-      
-    }
+
+  }
+
+  // ------------------------------------4/7 read indication ---- not working
+
+  // $scope.readMsg = [];
+
+  // $scope.openMsg = function (Msg) {
+  //   $scope.readMsg.push(Msg);
+
+  //   for (i = 0; i <= $scope.readMsg.length; i++) {
+  //     if ($scope.readMsg[i] === Msg) {
+  //       return false;
+  //     } else return  true;
+
+  //   }
 
 
-    // ------------------------------------4/7
+    
+  // }
 
- 
+
+
+
 
 
 })

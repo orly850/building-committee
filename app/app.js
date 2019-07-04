@@ -14,11 +14,11 @@ app.config(function ($routeProvider) {
             templateUrl: "app/tenants/tenants.html",
             controller: "tenantsCtrl"
         })
-        .when("/updatMsg", {
-            templateUrl: "app/message/updatMsg.html",
-            controller: "updatMsgCtrl"
+    //     .when("/updatMsg", {
+    //         templateUrl: "app/message/updatMsg.html",
+    //         controller: "updatMsgCtrl"
         
-     })
+    //  })
 
 
 });

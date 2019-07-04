@@ -71,6 +71,7 @@ app.factory("msgSrv", function ($http, $q) {
     // }
 
     function editMsg(txt){
+        // var msg;
         msgArr[a].details = txt;
     }
 //------------------------------

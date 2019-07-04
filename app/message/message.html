@@ -2,10 +2,12 @@
     <nav-bar></nav-bar>
     <div class="msg">
         <h4>wellcome {{active.name}}</h4>
-        <h1>message</h1>
+        <h2>message</h2>
         <br>
 
         <div ng-include="'app/message/newMessage.html'"></div>
+        <div ng-include="'app/message/updatMsg.html'"></div>
+
 
         <div class="row ">
             <div class="form-group col md-6">
@@ -39,13 +41,14 @@
 
         <div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
 
-            <div class="card " ng-repeat="item in msgArr| filter:filterMsg">
+            <div class="card " ng-repeat="item in msgArr| filter:filterMsg" >
 
                 <div class="card-header" role="tab" id="section1HeaderId">
                     <h6 class="mb-0">
 
-                        <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}"
-                            target="_self" aria-expanded="true" aria-controls="section1ContentId">
+                        <a  data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
+                            target="_self" aria-expanded="true" aria-controls="section1ContentId"  ng-click = openMsg(item) ng-class="{'title' : item === readMsg }">
+                            
                             {{item.createdAt|date}} __
                             {{item.title}}
                         </a>
@@ -62,9 +65,11 @@
                         </div>
 
 
-                    <a href="#!updatMsg"><button type="button" class="btn btn-primary ml-2" ng-click="editMsg(item)">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
+                    <!-- <a href="#!updatMsg"> -->
+                        <button type="button" class="btn btn-primary ml-2" ng-click="editMsg(item)" data-toggle="modal" data-target="#modelId2" >Edit <i class="far fa-edit"></i></button>
+                    <!-- </a> -->
                         
-                        <button type="button" class="btn btn-danger ml-2" ng-click="deleteMsg(item)">Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-danger ml-2" ng-click="deleteMsg(item)">Delete  <i class="fas fa-trash"></i></button>
                         
                     </div>
                 </div>
