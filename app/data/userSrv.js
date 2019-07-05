@@ -63,7 +63,7 @@ app.factory("userSrv", function ($log, $http, $q) {
     }
     //--------------------------------------
     //new user---------------------------
-    var userCount = 4;
+    var userCount = 5;
     function  newUser( name, email, appartment,  password, pic) {
         var newU = new User(userCount, 1, name, email, appartment, false, password, pic);
         ++userCount;

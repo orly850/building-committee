@@ -5,7 +5,7 @@
         "createdAt": "2019-01-17",
         "title": "Tenants Meeting",
         "details": "Please dont late",
-        "priority": "info",
+        "priority": "important",
         "comments": "",
         "wasRead":false
 
@@ -39,7 +39,7 @@
     "createdAt": "2019-04-16",
     "title": "Poker night",
     "details": "hello poker grupe! we will meet tommorow at 21:30, please bring snaks",
-    "priority": "important",
+    "priority": "info",
     "comments": "",
     "wasRead":false
 }

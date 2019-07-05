@@ -9,7 +9,14 @@
   
 }
 
+@font-face {
+  font-family: font;
+  src:url("font/Indie_Flower/IndieFlower.ttf");
+}
+
+
 .jumbotron {
+  font-family: font;
     background-image: url("http://www.tarbut-hadiur.gov.il/sites/www.tarbut-hadiur.gov.il/themes/tarbut_diyur_responsive/images/inner_banner.png");
     background-size: cover;
     /* background-repeat: no-repeat; */
@@ -28,6 +35,19 @@
   .info{
     color:rgba(255, 132, 0, 0.904)
 
+  }
+
+  span{
+    font-size: 13px
+
+  }
+
+  .font{
+    font-family: font;
+  }
+
+  .title{
+    text-align: center;
   }
 
   /* .image{
