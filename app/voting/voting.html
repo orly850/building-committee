@@ -1,0 +1,107 @@
+<div>
+    <nav-bar></nav-bar>
+    <!-- <div ng-include="'app/message/newMessage.html'"></div> -->
+
+    <div class="msg row">
+        <div class="col-md-6">
+            <h4 class="font">Active Voting</h4>
+            <br>
+            <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newMsg()" data-toggle="modal"
+                data-target="#modelId">Add New Vote</button>  <br>
+            <!-- ng-show="isCommittee()" -->
+          
+            <div id="accordianId" role="tablist" aria-multiselectable="true">
+                <!-- ============================= ng-repeat -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="section1HeaderId">
+                        <h6 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId"
+                                target="_self" aria-expanded="true" aria-controls="section1ContentId">
+                                Section 1
+                            </a>
+                        </h6>
+                    </div>
+                    <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+                        <div class="card-body">
+                            Section 1 content
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="form-group col md-6">
+
+
+    </div> -->
+
+        <div class="col-md-6">
+            <h4 class="font">Voting results</h4>
+            <label for=""></label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="search"
+                ng-model="query">
+
+            <br>
+            <div id="accordianId2" role="tablist" aria-multiselectable="true">
+                <!-- ============================= ng-repeat -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="section1HeaderId2">
+                        <h6 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordianId2" href="#section1ContentId2"
+                                target="_self" aria-expanded="true" aria-controls="section1ContentId2">
+                                Section 1
+                            </a>
+                        </h6>
+                    </div>
+                    <div id="section1ContentId2" class="collapse in" role="tabpanel"
+                        aria-labelledby="section1HeaderId2">
+                        <div class="card-body">
+                            Section 1 content
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
+        <div class="card " ng-repeat="item in msgArr| filter:filterMsg | orderBy:val">
+            <div class="card-header" role="tab" id="section1HeaderId">
+                <h6 class="mb-0">
+
+                    <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
+                        target="_self" aria-expanded="true" aria-controls="section1ContentId" ng-click=openMsg(item)
+                        ng-class="{'wasRead' : item.wasRead }">
+
+                        {{item.createdAt|date:"short"}} __
+                        {{item.title}}
+                        {{item.priority}}
+                    </a>
+                </h6>
+            </div>
+            <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel"
+                aria-labelledby="section1HeaderId">
+                <div class="card-body row">
+                    <div class="col">
+                        {{item.createdBy}} :
+                        {{item.details}}
+
+                    </div>
+
+                    <button type="button" class="btn btn-primary ml-2" ng-click="editMsg(item)" data-toggle="modal"
+                        data-target="#modelId2" ng-show=isComeete()>Edit <i class="far fa-edit"></i></button>
+
+                    <button type="button" class="btn btn-danger ml-2" ng-click="deleteMsg(item)"
+                        ng-show=isComeete()>Delete <i class="fas fa-trash"></i></button>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+</div>

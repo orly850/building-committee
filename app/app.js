@@ -1,5 +1,6 @@
 
 var app = angular.module("buildingCommittee", ["ngRoute"]);
+
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
@@ -9,16 +10,15 @@ app.config(function ($routeProvider) {
             controller: "loginCtrl"
         }).when("/message", {
             templateUrl: "app/message/message.html",
-            controller: "messageCtrl",
+            controller: "messageCtrl"
         }).when("/tenants", {
             templateUrl: "app/tenants/tenants.html",
             controller: "tenantsCtrl"
-        })
-    //     .when("/updatMsg", {
-    //         templateUrl: "app/message/updatMsg.html",
-    //         controller: "updatMsgCtrl"
+        }) .when("/voting", {
+            templateUrl: "app/voting/voting.html",
+            controller: "votingCtrl"
         
-    //  })
+     })
 
 
 });

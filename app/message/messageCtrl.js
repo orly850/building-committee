@@ -1,6 +1,6 @@
 
 app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
-
+  $scope.test="dfgdfsgfg"
   msgSrv.getMsg().then(function (msgArr) {
     $scope.msgArr = msgArr;
   }, function (err) {
