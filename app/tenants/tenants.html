@@ -25,10 +25,12 @@
                         <div class="image">
                             <img ng-src={{item.pic}}>
                         </div>
-                        <div class="col">
+                        <div class="col ">
                             Name: {{item.name}}<br>
                             Email: <a ng-href="mailto:{{item.email}}">{{item.email}}</a> <br>
                             Appartment: {{item.appartment}}
+                        </div>
+                        <div class="col ml-auto">
                             <button type="button" class="btn btn-danger ml-2" ng-click="deleteUser(item)">Delete <i
                                     class="fas fa-trash"></i></button>
 

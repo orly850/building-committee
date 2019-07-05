@@ -3,7 +3,6 @@
     <div class="msg">
         <h4 class="font title">wellcome {{active.name}}</h4>
         <h4 class="font">Messages</h4>
-        <br>
 
         <div ng-include="'app/message/newMessage.html'"></div>
         <div ng-include="'app/message/updatMsg.html'"></div>
@@ -39,16 +38,14 @@
         </div>
 
         <div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
-
+            <!-- ============================= ng-repeat -->
             <div class="card " ng-repeat="item in msgArr| filter:filterMsg | orderBy:val">
-
-
                 <div class="card-header" role="tab" id="section1HeaderId">
                     <h6 class="mb-0">
 
                         <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
                             target="_self" aria-expanded="true" aria-controls="section1ContentId" ng-click=openMsg(item)
-                            ng-class="{'title' : item.wasRead }">
+                            ng-class="{'wasRead' : item.wasRead }">
 
                             {{item.createdAt|date:"short"}} __
                             {{item.title}}
