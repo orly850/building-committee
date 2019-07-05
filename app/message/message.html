@@ -2,7 +2,7 @@
     <nav-bar></nav-bar>
     <div class="msg">
         <h4>wellcome {{active.name}}</h4>
-        <h2>message</h2>
+        <h4>messag</h4>
         <br>
 
         <div ng-include="'app/message/newMessage.html'"></div>
@@ -50,7 +50,7 @@
                         <a  data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
                             target="_self" aria-expanded="true" aria-controls="section1ContentId"  ng-click = openMsg(item) ng-class="{'title' : item.wasRead }">
                             
-                            {{item.createdAt|date}} __
+                            {{item.createdAt|date:"short"}} __
                             {{item.title}}
                         </a>
                     </h6>

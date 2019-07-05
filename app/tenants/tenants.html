@@ -1,32 +1,39 @@
-<nav-bar></nav-bar>
+<div>
+    <nav-bar></nav-bar>
 
+    <div ng-include="'app/tenants/newTenant.html'"></div>
 
-<div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
-    <h1>tenants</h1>
-    <div class="card" ng-repeat="item in tenantArr">
-        <div class="card-header" role="tab" id="section1HeaderId">
-            <h5 class="mb-0">
-                <a data-toggle="collapse" data-parent="#accordianId" href="#{{item.name}}" target="_self"
-                    aria-expanded="true" aria-controls="section1ContentId">
-                    {{item.name}}
-                </a>
-            </h5>
-        </div>
-        <div id="{{item.name}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
-            <div class="card-body">
-                <div class="row">
-                    <div>
-                        <!-- <img ng-src=""> -->
-                        <img ng-src= {{item.pic}}>
-                    </div>
-                    <div class="col">
+    <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="()" data-toggle="modal"
+        data-target="#modelId3" >Add New Tenant</button>
+
+    <div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
+        <h4>Tenants</h4>
+        <div class="card" ng-repeat="item in tenantArr">
+            <div class="card-header" role="tab" id="section1HeaderId">
+                <h5 class="mb-0">
+                    <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.userId}}" target="_self"
+                        aria-expanded="true" aria-controls="section1ContentId">
+                        {{item.name}}
+                    </a>
+                </h5>
+            </div>
+            <div id="section1ContentId{{item.userId}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="image">
+                            <img ng-src={{item.pic}}>
+                        </div>
+                        <div class="col">
                             Name: {{item.name}}<br>
                             Email: <a ng-href="mailto:{{item.email}}">{{item.email}}</a> <br>
                             Appartment: {{item.appartment}}
+                            <button type="button" class="btn btn-danger ml-2" ng-click="deleteUser(item)">Delete <i
+                                    class="fas fa-trash"></i></button>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
