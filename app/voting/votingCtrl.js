@@ -1,7 +1,12 @@
 
-app.controller("votingCtrl", function ($scope, msgSrv, userSrv) {
+app.controller("votingCtrl", function ($scope, voteSrv, userSrv) {
     
-    $scope.test="asfsdfsdf"
+    
+    voteSrv.getVots().then(function (arr) {
+        $scope.votesArr = arr;
+      }, function (err) {
+        $log.error(err);
+      })
+    
 
-    
 })
