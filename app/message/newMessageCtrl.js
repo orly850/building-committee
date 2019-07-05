@@ -14,9 +14,6 @@ app.controller("newMesCtrl", function ($scope,  userSrv, msgSrv) {
         msgSrv.newMsg( $scope.name,  $scope.title, $scope.details, $scope.priorty)
     };
 
-
-
-
 })
 
 

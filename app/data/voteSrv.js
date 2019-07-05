@@ -13,12 +13,9 @@ app.factory("voteSrv", function ($http, $q) {
 
     }
 
-
-
-    //------------------------------------------------------------
+    //----------get votes--------------------------------------------------
 
     var votesArr = [];
-
     var wasEverLoaded = false;
 
     function getVots() {
@@ -42,13 +39,27 @@ app.factory("voteSrv", function ($http, $q) {
                 async.reject(err);
             });
         }
-
         return async.promise;
     }
     console.log(votesArr);
 
+
+    //new Vote---------------------------
+    var votesCount = 4;
+
+    var date = new Date();
+    function newVote(createdBy, title, details, option,dueDate,votes) {
+        var vote = new Voteing(votesCount, createdBy, date, title, details, option,dueDate,votes);
+        ++votesCount;
+        votesArr.unshift(vote);
+        console.log(votesArr);
+    }
+
+
+
     return {
-        getVots: getVots
+        getVots: getVots,
+        newVote:newVote
     }
 
 })

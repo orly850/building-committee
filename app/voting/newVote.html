@@ -1,14 +1,12 @@
-<!-- <nav-Bar></nav-Bar> -->
-
-<div ng-controller="newMesCtrl" class="msg">
+<div ng-controller="newVoteCtrl" class="msg">
 
     <!-- Modal -->
     <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Message</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                    <h5 class="modal-title">New Vote</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -30,24 +28,27 @@
                             </div>
                         </div>
 
+                        <!-- <div class="form-group">
+                              <label for=""></label>
+                              <select class="form-control form-control-sm" name="" id="">
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                              </select>
+                            </div> -->
+
                         <div class="form-group row">
-                            <label for="input2" class="col-sm-2 col-form-label" >Priorty</label>
+                            <label for="input2" class="col-sm-2 col-form-label">option</label>
                             <div class="col-sm-10">
                                 <select class="custom-select custom-select-sm" ng-model="priorty">
-                                    <option value="1" >Info</option>
-                                    <option value="2" >Importtant</option>
+                                    <option value="1">Info</option>
+                                    <option value="2">Importtant</option>
                                 </select>
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="input2" class="col-sm-2 col-form-label">Image URL</label>
-                            <div class="col-sm-10">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input">
-                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
-                                </div>
-                            </div>
+                            <input type="date" name="" id="">
                         </div>
 
                         <div class="col-auto my-1">
