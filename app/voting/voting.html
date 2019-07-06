@@ -2,10 +2,11 @@
     <nav-bar></nav-bar>
     <div ng-include="'app/voting/newVote.html'"></div>
 
-    <div class="msg row">
+    <div class="msg row vote border">
         <div class="col-md-6 ">
             <h4 class="font title">Active Voting</h4>
-            <br>
+             <hr class="my-2">
+
             <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newVote()"
                 ng-show="isCommittee()" data-toggle="modal" data-target="#modelId">Add New Vote</button> <br>
 
@@ -24,10 +25,10 @@
                         aria-labelledby="section1HeaderId">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-3 ">
                                     Details:
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 ">
                                     {{item.details}}
                                 </div>
                                 <div class="col-md-3">
@@ -50,12 +51,13 @@
                                     <a href="" ng click="dueDateUpdt(item)">Update Due Date</a>
                                 </div>
                             </div>
-
+                            <hr class="my-2">
                             <div class="row">
                                 <div class="col-md-6">
                                     Options:
                                 </div>
                                 {{item.options}}
+
                             </div>
 
                         </div>
@@ -64,10 +66,11 @@
             </div>
         </div>
 
-<!-- -------------------------------------------------- voting results--------- -->
+        <!-- -------------------------------------------------- voting results --------- -->
         <div class="col-md-6">
             <h4 class="font title">Voting results</h4>
-        
+            <hr class="my-2">
+
             <label for=""></label>
             <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="search"
                 ng-model="query">

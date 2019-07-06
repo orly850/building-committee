@@ -60,18 +60,24 @@
     font-weight: bold;
     color: blueviolet;
   }
+  .tenant{
+    margin-top: 25px;
+  }
 
+.vote{
+  margin-top: 25px;
+}
   /* .row{
     margin-top: 20px;
     border: groove;
   } */
 
-  /* .border{
+  .border{
     border: groove;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 
   }
- */
+ 
 
 
 
