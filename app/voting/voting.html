@@ -15,13 +15,13 @@
                 <div class="card"ng-repeat="item in votesArr">
                     <div class="card-header" role="tab" id="section1HeaderId">
                         <h6 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId"
+                            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
                                 target="_self" aria-expanded="true" aria-controls="section1ContentId">
                                 Section 1
                             </a>
                         </h6>
                     </div>
-                    <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+                    <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
                         <div class="card-body">
                             Section 1 content
                         </div>
@@ -30,10 +30,6 @@
             </div>
         </div>
 
-        <!-- <div class="form-group col md-6">
-
-
-    </div> -->
 
         <div class="col-md-6">
             <h4 class="font title">Voting results</h4>
@@ -47,13 +43,13 @@
                 <div class="card">
                     <div class="card-header" role="tab" id="section1HeaderId2">
                         <h6 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordianId2" href="#section1ContentId2"
+                            <a data-toggle="collapse" data-parent="#accordianId2" href="#{{item.id}}"
                                 target="_self" aria-expanded="true" aria-controls="section1ContentId2">
                                 Section 1
                             </a>
                         </h6>
                     </div>
-                    <div id="section1ContentId2" class="collapse in" role="tabpanel"
+                    <div id="{{item.id}}" class="collapse in" role="tabpanel"
                         aria-labelledby="section1HeaderId2">
                         <div class="card-body">
                             Section 1 content

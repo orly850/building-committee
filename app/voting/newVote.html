@@ -5,56 +5,73 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Vote</h5>
+                    <h5 class="modal-title">Vote</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
 
-                    <form>
-                        <div class="form-group row">
-                            <label for="input1" class="col-sm-2 col-form-label">Title</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input1" placeholder="Enter title"
-                                    ng-model="title">
-                            </div>
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">New Voting</h3>
                         </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Title</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" value="Jane" ng-model="title">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Details</label>
+                                    <div class="col-lg-9">
+                                        <textarea class="form-control" rows="3" ng-model="details"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
 
-                        <div class="form-group row">
-                            <label for="input2" class="col-sm-2 col-form-label">Details</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="3" ng-model="details"></textarea>
-                            </div>
+                                    <label class="col-lg-3 col-form-label form-control-label">Options</label>
+                                    <div class="col-lg-6">
+                                        <input class="form-control" type="text" value="" ng-model="options">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="button" class="btn btn-primary" value="add " ng-click="add()">
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ml-auto">
+                                    <ul>
+                                        <li ng-repeat="item in arr"> {{item}}</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">End Date</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="date" value="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <div class="col-lg-9">
+                                        <input type="reset" class="btn btn-secondary" value="Cancel">
+                                        <input type="button" class="btn btn-primary" value="Save Changes">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                    </div>
+                    <!-- /form user info -->
 
-                        <!-- <div class="form-group">
-                              <label for=""></label>
-                              <select class="form-control form-control-sm" name="" id="">
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                              </select>
-                            </div> -->
 
-                        <div class="form-group row">
-                            <label for="input2" class="col-sm-2 col-form-label">option</label>
-                            <div class="col-sm-10">
-                                <select class="custom-select custom-select-sm" ng-model="priorty">
-                                    <option value="1">Info</option>
-                                    <option value="2">Importtant</option>
-                                </select>
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <input type="date" name="" id="">
-                        </div>
 
-                        <div class="col-auto my-1">
-                            <button type="button" class="btn btn-primary" ng-click="newMsg()">Submit</button>
-                        </div>
-                    </form>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
