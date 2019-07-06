@@ -29,7 +29,10 @@ app.controller("newVoteCtrl", function ($scope, userSrv, voteSrv) {
     }
 
     $scope.newVote = function () {
-        voteSrv.newVote($scope.name, $scope.title, $scope.details, $scope.arr,$scope.dueDate)
+        voteSrv.newVote($scope.name, $scope.title, $scope.details, $scope.arr,$scope.dueDate);
+        $scope.arr = [];
+        $scope.title="";
+        $scope.details="";
     };
 
     //--------------------------------------------

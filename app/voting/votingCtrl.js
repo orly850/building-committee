@@ -19,17 +19,14 @@ app.controller("votingCtrl", function ($scope, voteSrv, userSrv) {
       })
 
       //----------update due Date---------------
-
-      $scope.dueDateUpdt = function() {
-        // return [5, 13];
-      }
-    
-
-    
+      // $scope.dueDateUpdt = function() {
+      //   voteSrv.dueDateUpdt(vote);
+        
+      // }   
 //-----------------------------------
   // Chart.JS
   $scope.getChartData = function() {
-    return [5, 13];
+    return [5, 17];
   }
   
   $scope.getChartLabels = function() {

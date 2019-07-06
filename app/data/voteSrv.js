@@ -55,6 +55,11 @@ app.factory("voteSrv", function ($http, $q) {
         console.log(votesArr);
     }
 
+   
+
+    //--update due date---
+
+
 
     return {
         getVots: getVots,

@@ -4,9 +4,9 @@
         "id": 0,
         "createdBy": "gil",
         "createdAt": "2019-08-07",
-        "title": "new fance",
+        "title": "new fence",
         "details": "Please dont late",
-        "options": "options",
+        "options": ["yes","no"],
         "dueDate": "2019-09-07",
         "votes":"9"
 
@@ -15,9 +15,9 @@
         "id": 1,
         "createdBy": "gil",
         "createdAt": "2019-07-17",
-        "title": "gardner hier",
+        "title": "gardener hire",
         "details": "Please dont late",
-        "options": "options",
+        "options": ["green","red","blue"],
         "dueDate": "2019-08-27",
         "votes":"3"
 
@@ -28,7 +28,7 @@
         "createdAt": "2019-04-01",
         "title": "fix the roof",
         "details": "Please dont late",
-        "options": "options",
+        "options": ["1","2"],
         "dueDate": "2019-05-17",
         "votes":"10"
 
@@ -37,9 +37,9 @@
         "id": 3,
         "createdBy": "gil",
         "createdAt": "2019-01-17",
-        "title": "Tenants Meeting",
+        "title": "paint the building",
         "details": "Please dont late",
-        "options": "options",
+        "options": ["yes","no"],
         "dueDate": "2019-02-17",
         "votes":"7"
 

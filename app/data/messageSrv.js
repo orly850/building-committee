@@ -62,15 +62,10 @@ app.factory("msgSrv", function ($http, $q) {
     var msg;
     var a;
     function seledtedMsg(msg){
-        a = msgArr.indexOf(msg);
-
-        
+        a = msgArr.indexOf(msg);   
     }
 
-    // function text(text){
-    //     var txt = text;
-    // }
-
+//-----------------------
     function editMsg(txt){
         // var msg;
         msgArr[a].details = txt;

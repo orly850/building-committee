@@ -50,9 +50,7 @@ app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
 
   }
 
-  // ------------------------------------4/7 read indication ---- not working
-
-  // $scope.readMsg = [];
+  // ------------------------------------read indication ---- not working
 
   $scope.openMsg = function (Msg) {
     Msg.wasRead = true;

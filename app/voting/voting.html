@@ -9,7 +9,6 @@
             <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newVote()"
                 ng-show="isCommittee()" data-toggle="modal" data-target="#modelId">Add New Vote</button> <br>
 
-
             <div id="accordianId" role="tablist" aria-multiselectable="true">
                 <!-- = ng-repeat========================= -->
                 <div class="card" ng-repeat="item in votesArr">
@@ -36,34 +35,42 @@
                                     <canvas id="pie" class="chart chart-pie" chart-data="getChartData()"
                                         chart-labels="getChartLabels()" chart-options="options">
                                     </canvas>
-
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-3">
                                     Due Date:
                                 </div>
 
                                 <div class="col-md-3">
-                                    {{item.dueDate}}
+                                    {{item.dueDate|date}}
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="" ng click="dueDateUpdt()">Update Due Date</a>
+                                    <a href="" ng click="dueDateUpdt(item)">Update Due Date</a>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Options:
+                                </div>
+                                {{item.options}}
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
+<!-- -------------------------------------------------- voting results--------- -->
         <div class="col-md-6">
             <h4 class="font title">Voting results</h4>
+        
             <label for=""></label>
             <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="search"
                 ng-model="query">
-
             <br>
             <div id="accordianId2" role="tablist" aria-multiselectable="true">
                 <!-- ============================= ng-repeat -->
