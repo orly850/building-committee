@@ -4,9 +4,9 @@
         "id": 0,
         "createdBy": "gil",
         "createdAt": "2019-08-07",
-        "title": "Tenants Meeting",
+        "title": "new fance",
         "details": "Please dont late",
-        "options": "important",
+        "options": "options",
         "dueDate": "2019-09-07",
         "votes":"9"
 
@@ -15,9 +15,9 @@
         "id": 1,
         "createdBy": "gil",
         "createdAt": "2019-07-17",
-        "title": "Tenants Meeting",
+        "title": "gardner hier",
         "details": "Please dont late",
-        "options": "important",
+        "options": "options",
         "dueDate": "2019-08-27",
         "votes":"3"
 
@@ -26,9 +26,9 @@
         "id": 2,
         "createdBy": "gil",
         "createdAt": "2019-04-01",
-        "title": "Tenants Meeting",
+        "title": "fix the roof",
         "details": "Please dont late",
-        "options": "important",
+        "options": "options",
         "dueDate": "2019-05-17",
         "votes":"10"
 
@@ -39,7 +39,7 @@
         "createdAt": "2019-01-17",
         "title": "Tenants Meeting",
         "details": "Please dont late",
-        "options": "important",
+        "options": "options",
         "dueDate": "2019-02-17",
         "votes":"7"
 

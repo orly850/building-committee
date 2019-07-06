@@ -8,17 +8,11 @@ app.controller("newVoteCtrl", function ($scope, userSrv, voteSrv) {
     $scope.details;
     $scope.options;
     $scope.name = $scope.user.name;
-
-    $scope.newVote = function () {
-        voteSrv.newVote($scope.name, $scope.title, $scope.details, $scope.options)
-    };
-    //--------------------------------------------
-
-
+    $scope.dueDate;
     $scope.arr = [];
     // $scope.count = 0;
 
-    $scope.add = function () {
+    $scope.add = function () {  // add to options to arr
         if (!$scope.options) {
             alert("Enter Option")
         } else {
@@ -31,12 +25,14 @@ app.controller("newVoteCtrl", function ($scope, userSrv, voteSrv) {
             $scope.arr.push($scope.options);
             // $scope.count++;
             $scope.options = "";
-
         }
-
     }
 
+    $scope.newVote = function () {
+        voteSrv.newVote($scope.name, $scope.title, $scope.details, $scope.arr,$scope.dueDate)
+    };
 
+    //--------------------------------------------
 
 
 

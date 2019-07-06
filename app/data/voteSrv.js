@@ -56,7 +56,6 @@ app.factory("voteSrv", function ($http, $q) {
     }
 
 
-
     return {
         getVots: getVots,
         newVote:newVote
