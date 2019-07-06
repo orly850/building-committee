@@ -6,13 +6,13 @@
         <div class="col-md-6 ">
             <h4 class="font title">Active Voting</h4>
             <br>
-            <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newVote()" ng-show="isCommittee()" data-toggle="modal"
-                data-target="#modelId">Add New Vote</button>  <br>
-            
-          
+            <button type="button" class="btn btn-outline-primary btn-sm ml-auto" ng-click="newVote()"
+                ng-show="isCommittee()" data-toggle="modal" data-target="#modelId">Add New Vote</button> <br>
+
+
             <div id="accordianId" role="tablist" aria-multiselectable="true">
                 <!-- = ng-repeat========================= -->
-                <div class="card"ng-repeat="item in votesArr">
+                <div class="card" ng-repeat="item in votesArr">
                     <div class="card-header" role="tab" id="section1HeaderId">
                         <h6 class="mb-0">
                             <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
@@ -21,9 +21,36 @@
                             </a>
                         </h6>
                     </div>
-                    <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+                    <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel"
+                        aria-labelledby="section1HeaderId">
                         <div class="card-body">
-                            {{item.details}}
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Details:
+                                </div>
+                                <div class="col-md-6">
+                                    {{item.details}}
+                                </div>
+                                <div class="col-md-3">
+                                    <h8>Voting Percentage</h8>
+                                    <canvas id="pie" class="chart chart-pie" chart-data="getChartData()"
+                                        chart-labels="getChartLabels()" chart-options="options">
+                                    </canvas>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Due Date:
+                                </div>
+
+                                <div class="col-md-3">
+                                    {{item.dueDate}}
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" ng click="dueDateUpdt()">Update Due Date</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,14 +70,13 @@
                 <div class="card">
                     <div class="card-header" role="tab" id="section1HeaderId2">
                         <h6 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordianId2" href="#{{item.id}}"
-                                target="_self" aria-expanded="true" aria-controls="section1ContentId2">
+                            <a data-toggle="collapse" data-parent="#accordianId2" href="#{{item.id}}" target="_self"
+                                aria-expanded="true" aria-controls="section1ContentId2">
                                 Section 1
                             </a>
                         </h6>
                     </div>
-                    <div id="{{item.id}}" class="collapse in" role="tabpanel"
-                        aria-labelledby="section1HeaderId2">
+                    <div id="{{item.id}}" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId2">
                         <div class="card-body">
                             Section 1 content
                         </div>
@@ -60,44 +86,4 @@
 
         </div>
     </div>
-
-
-
-
-    <!-- <div class="msg" id="accordianId" role="tablist" aria-multiselectable="true">
-        <div class="card " ng-repeat="item in msgArr| filter:filterMsg | orderBy:val">
-            <div class="card-header" role="tab" id="section1HeaderId">
-                <h6 class="mb-0">
-
-                    <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId{{item.id}}  "
-                        target="_self" aria-expanded="true" aria-controls="section1ContentId" ng-click=openMsg(item)
-                        ng-class="{'wasRead' : item.wasRead }">
-
-                        {{item.createdAt|date:"short"}} __
-                        {{item.title}}
-                        {{item.priority}}
-                    </a>
-                </h6>
-            </div>
-            <div id="section1ContentId{{item.id}}" class="collapse in" role="tabpanel"
-                aria-labelledby="section1HeaderId">
-                <div class="card-body row">
-                    <div class="col">
-                        {{item.createdBy}} :
-                        {{item.details}}
-
-                    </div>
-
-                    <button type="button" class="btn btn-primary ml-2" ng-click="editMsg(item)" data-toggle="modal"
-                        data-target="#modelId2" ng-show=isComeete()>Edit <i class="far fa-edit"></i></button>
-
-                    <button type="button" class="btn btn-danger ml-2" ng-click="deleteMsg(item)"
-                        ng-show=isComeete()>Delete <i class="fas fa-trash"></i></button>
-
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
 </div>

@@ -1,5 +1,5 @@
 
-var app = angular.module("buildingCommittee", ["ngRoute"]);
+var app = angular.module("buildingCommittee", ["ngRoute","chart.js"]);
 
 app.config(function ($routeProvider) {
     $routeProvider
