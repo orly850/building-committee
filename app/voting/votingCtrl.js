@@ -20,15 +20,14 @@ app.controller("votingCtrl", function ($scope, voteSrv, userSrv) {
 
   // ----------update due Date---------------
   // $scope.newDate=Date.now();
-  $scope.newDate;
+
+  $scope.newDate ;
   $scope.DateUpdt = function (vote) {
     voteSrv.seledtedvote(vote);
     console.log($scope.newDate);
     voteSrv.dueDateUpdt($scope.newDate);
 
   }
-
-  // https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
 
 
   //---------------get errors in console log--------------------
