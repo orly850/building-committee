@@ -1,35 +1,43 @@
 
 app.controller("votingCtrl", function ($scope, voteSrv, userSrv) {
-    
-    $scope.active = userSrv.getActive();
-    //-------------------------------------
-    if ($scope.active) {
-        $scope.isCommittee = function () {
-          return $scope.active.isCommitteeMember
-        }
-      }
-    
-      //----------------------------------
-    
-    
-    voteSrv.getVots().then(function (arr) {
-        $scope.votesArr = arr;
-      }, function (err) {
-        $log.error(err);
-      })
 
-      //----------update due Date---------------
-      // $scope.dueDateUpdt = function() {
-      //   voteSrv.dueDateUpdt(vote);
-        
-      // }   
-//-----------------------------------
+  $scope.active = userSrv.getActive();
+  //-------------------------------------
+  $scope.isCommittee = function () {
+      return $scope.active.isCommitteeMember
+    }
+
+
+
+  //----------------------------------
+
+
+  voteSrv.getVots().then(function (arr) {
+    $scope.votesArr = arr;
+  }, function (err) {
+    $log.error(err);
+  })
+
+  // ----------update due Date---------------
+  // $scope.newDate=Date.now();
+  $scope.newDate;
+  $scope.DateUpdt = function (vote) {
+    voteSrv.seledtedvote(vote);
+    console.log($scope.newDate);
+    voteSrv.dueDateUpdt($scope.newDate);
+
+  }
+
+  // https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
+
+
+  //---------------get errors in console log--------------------
   // Chart.JS
-  $scope.getChartData = function() {
-    return [5, 17];
-  }
-  
-  $scope.getChartLabels = function() {
-    return ["blue", "red"];
-  }
+  // $scope.getChartData = function() {
+  //   return [5, 17];
+  // }
+
+  // $scope.getChartLabels = function() {
+  //   return ["blue", "red"];
+  // }
 })

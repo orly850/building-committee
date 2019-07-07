@@ -1,6 +1,6 @@
 
 app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
-  
+
   msgSrv.getMsg().then(function (msgArr) {
     $scope.msgArr = msgArr;
   }, function (err) {
@@ -13,12 +13,12 @@ app.controller("messageCtrl", function ($scope, msgSrv, userSrv) {
   $scope.active = userSrv.getActive();
   //-----------------------------------------------------
   $scope.isComeete = function () {
-
-    return   $scope.active.isCommitteeMember;
+    if ($scope.active) {
+      return $scope.active.isCommitteeMember;
+    }
   }
-  
 
-  $scope.val 
+  $scope.val
   $scope.val2 = "";
 
   $scope.query = "";

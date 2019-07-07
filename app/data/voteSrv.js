@@ -59,11 +59,22 @@ app.factory("voteSrv", function ($http, $q) {
 
     //--update due date---
 
+    var vote;
+    var index;
+    function seledtedvote(vote){
+        index = votesArr.indexOf(vote);   
+    }
 
+    function dueDateUpdt(newDate){
+       
+        votesArr[index].dueDate = newDate;
+    }
 
     return {
         getVots: getVots,
-        newVote:newVote
+        newVote:newVote,
+        seledtedvote:seledtedvote,
+        dueDateUpdt:dueDateUpdt
     }
 
 })
