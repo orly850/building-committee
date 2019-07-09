@@ -25,7 +25,7 @@ app.controller("votingCtrl", function ($scope, voteSrv, userSrv) {
   $scope.DateUpdt = function (vote) {
     voteSrv.seledtedvote(vote);
     console.log($scope.newDate);
-    voteSrv.dueDateUpdt($scope.newDate);
+    voteSrv.dueDateUpdt(vote.newDate);
 
   }
 
