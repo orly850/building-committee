@@ -3,10 +3,16 @@ app.controller("votingCtrl", function ($scope, voteSrv, userSrv) {
 
   $scope.active = userSrv.getActive();
   //-------------------------------------
-  $scope.isCommittee = function () {
-      return $scope.active.isCommitteeMember
-    }
+  // $scope.isCommittee = function () {
+  //     return $scope.active.isCommitteeMember
+  //   }
 
+    $scope.isCommittee = function () {
+      if ($scope.active) {
+        return $scope.active.isCommitteeMember;
+      }
+    }
+  
 
 
   //----------------------------------
